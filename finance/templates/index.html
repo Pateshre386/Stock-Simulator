@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="header" backgroundColor="blue">
+        <h1>Index<h1>
+    </div>
+    <div class="section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                    <th>Shares</th>
+                    <th>Value</th>
+                    <th>Balance</th>
+                    <th>Networth</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in tab %}
+                    <tr>
+                        <td>{{ row["symbol"] }}</td>
+                        <td>{{ "{:,.2f}".format(row["price"]) }}</td>
+                        <td>{{ "{:,.2f}".format(row["shares"]) }}</td>
+                        <td>{{ "{:,.2f}".format(row["value"]) }}</td>
+                        <td>{{ "{:,.2f}".format(cash) }}</td>
+                        <td>{{ "{:,.2f}".format(net) }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="header" backgroundColor="blue">
+        <h1>History<h1>
+    </div>
+    <div class="section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Symbol</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Shares</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in history|reverse %}
+                    <tr>
+                        <td>{{ row["username"] }}</td>
+                        <td>{{ row["symbol"] }}</td>
+                        <td>{{ row["type"] }}</td>
+                        <td>{{ "{:,.2f}".format(row["price"]) }}</td>
+                        <td>{{ "{:,.2f}".format(row["shares"]) }}</td>
+                        <td>{{ row["time"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
