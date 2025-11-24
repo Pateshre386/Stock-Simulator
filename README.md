@@ -1,10 +1,11 @@
 # Stock-Simulator
-#A web application that allows users to buy, sell and quote stocks and participate in a stock market simulation as if it were a website like Questrade or Wealthsimple.
 
-#.py file holds the Flask web framework
+A web application that allows users to buy, sell and quote stocks and participate in a stock market simulation as if it were a website like Questrade or Wealthsimple.
 
-#.html files hold each individual webpage
+.py file holds the Flask web framework
 
-#.css holds the styling for the webpages
+.html files hold each individual webpage
 
-#.db holds the SQL database to process and handle user data
+.css holds the styling for the webpages
+
+.db holds the SQL database to process and handle user data
